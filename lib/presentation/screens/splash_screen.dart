@@ -1,6 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:whatsappclonecleanarch/presentation/screens/welcome_screen.dart';
+import 'package:whats_app_clone_clean_architecture/presentation/screens/welcome_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);

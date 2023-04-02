@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:whatsappclonecleanarch/presentation/screens/home_screen.dart';
-import 'package:whatsappclonecleanarch/presentation/theme/constants.dart';
-import 'package:whatsappclonecleanarch/presentation/theme/style.dart';
-import 'package:whatsappclonecleanarch/presentation/widgets/default_button_widget.dart';
+
+import '../screens/home_screen.dart';
+import '../theme/constants.dart';
+import '../theme/style.dart';
+import '../widgets/default_button_widget.dart';
 
 class SetInitialProfileWidget extends StatefulWidget {
+  const SetInitialProfileWidget({super.key});
+
   @override
   _SetInitialProfileWidgetState createState() =>
       _SetInitialProfileWidgetState();

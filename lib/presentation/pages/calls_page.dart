@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:whatsappclonecleanarch/presentation/pages/sub_pages/single_item_call_page.dart';
-import 'package:whatsappclonecleanarch/presentation/theme/style.dart';
+import 'package:whats_app_clone_clean_architecture/presentation/pages/sub_pages/single_item_call_page.dart';
+
+import '../theme/style.dart';
+
 
 class CallsPage extends StatelessWidget {
   @override

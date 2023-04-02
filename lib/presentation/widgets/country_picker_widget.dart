@@ -2,8 +2,9 @@ import 'package:country_pickers/country.dart';
 import 'package:country_pickers/country_picker_dialog.dart';
 import 'package:country_pickers/utils/utils.dart';
 import 'package:flutter/material.dart';
-import 'package:whatsappclonecleanarch/presentation/theme/constants.dart';
-import 'package:whatsappclonecleanarch/presentation/theme/style.dart';
+
+import '../theme/constants.dart';
+import '../theme/style.dart';
 
 class CountryPickerWidget extends StatefulWidget {
   final Function countryPickerCallback;

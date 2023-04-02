@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:whatsappclonecleanarch/presentation/pages/phone_varification_page.dart';
-import 'package:whatsappclonecleanarch/presentation/theme/constants.dart';
-import 'package:whatsappclonecleanarch/presentation/widgets/country_picker_widget.dart';
-import 'package:whatsappclonecleanarch/presentation/widgets/app_description_widget.dart';
-import 'package:whatsappclonecleanarch/presentation/widgets/default_button_widget.dart';
-import 'package:whatsappclonecleanarch/presentation/widgets/user_phone_number_widget.dart';
+
+import '../pages/phone_varification_page.dart';
+import '../theme/constants.dart';
+import '../widgets/app_description_widget.dart';
+import '../widgets/country_picker_widget.dart';
+import '../widgets/default_button_widget.dart';
+import '../widgets/user_phone_number_widget.dart';
 
 class RegistrationScreen extends StatefulWidget {
 

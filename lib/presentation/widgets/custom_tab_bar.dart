@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:whatsappclonecleanarch/presentation/theme/style.dart';
+
+import '../theme/style.dart';
 
 class CustomTabBar extends StatelessWidget {
   final int index;

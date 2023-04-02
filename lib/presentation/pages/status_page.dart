@@ -1,8 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:whatsappclonecleanarch/presentation/pages/sub_pages/singe_item_story_page.dart';
-import 'package:whatsappclonecleanarch/presentation/theme/style.dart';
+import 'package:whats_app_clone_clean_architecture/presentation/pages/sub_pages/singe_item_story_page.dart';
+
+import '../theme/style.dart';
 
 class StatusPage extends StatelessWidget {
   @override

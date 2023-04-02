@@ -27,7 +27,7 @@ class _PinCodeWidgetState extends State<PinCodeWidget> {
             obscureText: true,
             autoDisposeControllers: false,
             onChanged: (pinCode) {
-              print(pinCode);
+
             },
           ),
           const Text("Enter your 6 digit code")

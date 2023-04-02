@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:whatsappclonecleanarch/presentation/screens/splash_screen.dart';
-import 'package:whatsappclonecleanarch/presentation/theme/style.dart';
+import 'package:whats_app_clone_clean_architecture/presentation/screens/splash_screen.dart';
+import 'package:whats_app_clone_clean_architecture/presentation/theme/style.dart';
 
 void main() {
   runApp(const MyApp());

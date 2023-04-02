@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:whatsappclonecleanarch/presentation/theme/constants.dart';
-import 'package:whatsappclonecleanarch/presentation/theme/style.dart';
+
+import '../../theme/constants.dart';
+import '../../theme/style.dart';
 
 class SingleItemCallPage extends StatelessWidget {
   @override

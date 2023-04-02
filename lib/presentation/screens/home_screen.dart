@@ -1,11 +1,11 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:whatsappclonecleanarch/presentation/pages/calls_page.dart';
-import 'package:whatsappclonecleanarch/presentation/pages/camera_page.dart';
-import 'package:whatsappclonecleanarch/presentation/pages/chat_page.dart';
-import 'package:whatsappclonecleanarch/presentation/pages/status_page.dart';
-import 'package:whatsappclonecleanarch/presentation/theme/style.dart';
-import 'package:whatsappclonecleanarch/presentation/widgets/custom_tab_bar.dart';
+
+import '../pages/calls_page.dart';
+import '../pages/camera_page.dart';
+import '../pages/chat_page.dart';
+import '../pages/status_page.dart';
+import '../theme/style.dart';
+import '../widgets/custom_tab_bar.dart';
 
 class HomeScreen extends StatefulWidget {
   @override

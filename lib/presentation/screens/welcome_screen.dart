@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
-import 'package:whatsappclonecleanarch/presentation/screens/registration_screen.dart';
-import 'package:whatsappclonecleanarch/presentation/theme/constants.dart';
-import 'package:whatsappclonecleanarch/presentation/theme/style.dart';
+import 'package:whats_app_clone_clean_architecture/presentation/screens/registration_screen.dart';
+
+import '../theme/constants.dart';
+import '../theme/style.dart';
 
 class WelcomeScreen extends StatelessWidget {
   @override

@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:whatsappclonecleanarch/presentation/theme/constants.dart';
+
+import '../../theme/constants.dart';
 
 class SingleItemChatUserPage extends StatelessWidget {
 
