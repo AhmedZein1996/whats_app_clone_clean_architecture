@@ -53,7 +53,10 @@ class SingleItemCallPage extends StatelessWidget {
                   ),
                 ],
               ),
-              Icon(Icons.call,color: primaryColor,)
+              Icon(
+                Icons.call,
+                color: primaryColor,
+              )
             ],
           ),
           Padding(

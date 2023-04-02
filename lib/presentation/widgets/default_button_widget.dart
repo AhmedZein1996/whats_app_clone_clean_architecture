@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 
 import '../theme/style.dart';
 
+import '../theme/style.dart';
+
 class DefaultButtonWidget extends StatelessWidget {
   Function onPressed;
 

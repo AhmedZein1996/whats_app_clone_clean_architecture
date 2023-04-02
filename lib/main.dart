@@ -18,8 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ThemeData().colorScheme.copyWith(
               primary: primaryColor,
-
-         ),
+            ),
         primaryColor: primaryColor,
       ),
       home: const SplashScreen(),

@@ -4,7 +4,7 @@ import '../theme/constants.dart';
 import '../theme/style.dart';
 
 class UserPhoneNumberWidget extends StatelessWidget {
-   String countryCode ;
+  String countryCode;
 
   UserPhoneNumberWidget({required this.countryCode});
 

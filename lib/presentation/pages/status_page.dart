@@ -1,30 +1,33 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
-import 'package:whats_app_clone_clean_architecture/presentation/pages/sub_pages/singe_item_story_page.dart';
 
 import '../theme/style.dart';
+import 'sub_pages/singe_item_story_page.dart';
 
 class StatusPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Stack(
-          children: <Widget>[
-            _customFloatingActionButton(),
-            SingleChildScrollView(
-              child: Column(
-                children: <Widget>[
-                  _storyWidget(),
-                  SizedBox(height: 8,),
-                  _recentTextWidget(),
-                  SizedBox(height: 8,),
-                  _listStories(),
-                ],
-              ),
-            )
-          ],
-        ),);
+      body: Stack(
+        children: <Widget>[
+          _customFloatingActionButton(),
+          SingleChildScrollView(
+            child: Column(
+              children: <Widget>[
+                _storyWidget(),
+                SizedBox(
+                  height: 8,
+                ),
+                _recentTextWidget(),
+                SizedBox(
+                  height: 8,
+                ),
+                _listStories(),
+              ],
+            ),
+          )
+        ],
+      ),
+    );
   }
 
   Widget _customFloatingActionButton() {
@@ -81,7 +84,7 @@ class StatusPage extends StatelessWidget {
 
   Widget _storyWidget() {
     return Container(
-      margin: EdgeInsets.only(left: 10,right: 10,top: 4),
+      margin: EdgeInsets.only(left: 10, right: 10, top: 4),
       child: Row(
         children: <Widget>[
           Container(
@@ -141,10 +144,8 @@ class StatusPage extends StatelessWidget {
   Widget _recentTextWidget() {
     return Container(
       width: double.infinity,
-      padding: EdgeInsets.symmetric(horizontal: 10,vertical: 4),
-      decoration: BoxDecoration(
-        color: Colors.grey[200]
-      ),
+      padding: EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+      decoration: BoxDecoration(color: Colors.grey[200]),
       child: Text("Recent updates"),
     );
   }

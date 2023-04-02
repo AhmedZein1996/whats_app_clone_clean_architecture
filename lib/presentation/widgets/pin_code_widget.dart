@@ -8,11 +8,12 @@ class PinCodeWidget extends StatefulWidget {
 
 class _PinCodeWidgetState extends State<PinCodeWidget> {
   final TextEditingController _pinCodeController = TextEditingController();
-@override
+  @override
   void dispose() {
-   _pinCodeController.dispose();
+    _pinCodeController.dispose();
     super.dispose();
   }
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -26,9 +27,7 @@ class _PinCodeWidgetState extends State<PinCodeWidget> {
             backgroundColor: Colors.transparent,
             obscureText: true,
             autoDisposeControllers: false,
-            onChanged: (pinCode) {
-
-            },
+            onChanged: (pinCode) {},
           ),
           const Text("Enter your 6 digit code")
         ],

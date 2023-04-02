@@ -16,13 +16,14 @@ class PhoneVerificationPage extends StatelessWidget {
             AppDescriptionWidget(),
             PinCodeWidget(),
             DefaultButtonWidget(
-              onPressed: (){
-              Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (_) => SetInitialProfileWidget(),
-                      ),
-                    );},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (_) => SetInitialProfileWidget(),
+                  ),
+                );
+              },
             ),
           ],
         ),
