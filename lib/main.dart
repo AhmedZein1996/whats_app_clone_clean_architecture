@@ -45,7 +45,7 @@ class MyApp extends StatelessWidget {
                 return HomeScreen(uid: state.uid,);
               }
               if(state is UnAuthenticated){
-                return const WelcomeScreen();
+                return WelcomeScreen();
               }
               return Container();
             });
