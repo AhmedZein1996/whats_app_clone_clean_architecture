@@ -2,10 +2,11 @@ import 'package:flutter/material.dart';
 
 import '../theme/style.dart';
 
+// ignore: must_be_immutable
 class DefaultButtonWidget extends StatelessWidget {
   Function onPressed;
 
-  DefaultButtonWidget({required this.onPressed});
+  DefaultButtonWidget({super.key, required this.onPressed});
 
   @override
   Widget build(BuildContext context) {

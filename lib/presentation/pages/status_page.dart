@@ -1,11 +1,11 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:whats_app_clone_clean_architecture/presentation/pages/sub_pages/singe_item_story_page.dart';
 
 import '../theme/style.dart';
 
 class StatusPage extends StatelessWidget {
+  const StatusPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -16,9 +16,9 @@ class StatusPage extends StatelessWidget {
               child: Column(
                 children: <Widget>[
                   _storyWidget(),
-                  SizedBox(height: 8,),
+                  const SizedBox(height: 8,),
                   _recentTextWidget(),
-                  SizedBox(height: 8,),
+                  const SizedBox(height: 8,),
                   _listStories(),
                 ],
               ),
@@ -38,21 +38,21 @@ class StatusPage extends StatelessWidget {
             width: 45,
             decoration: BoxDecoration(
               color: Colors.grey[200],
-              borderRadius: BorderRadius.all(Radius.circular(25)),
+              borderRadius: const BorderRadius.all(Radius.circular(25)),
               boxShadow: [
                 BoxShadow(
-                    offset: Offset(0, 4.0),
+                    offset: const Offset(0, 4.0),
                     blurRadius: 0.50,
                     color: Colors.black.withOpacity(.2),
                     spreadRadius: 0.10)
               ],
             ),
-            child: Icon(
+            child: const Icon(
               Icons.edit,
               color: Colors.blueGrey,
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 8.0,
           ),
           Container(
@@ -60,16 +60,16 @@ class StatusPage extends StatelessWidget {
             width: 55,
             decoration: BoxDecoration(
               color: primaryColor,
-              borderRadius: BorderRadius.all(Radius.circular(50)),
+              borderRadius: const BorderRadius.all(Radius.circular(50)),
               boxShadow: [
                 BoxShadow(
-                    offset: Offset(0, 4.0),
+                    offset: const Offset(0, 4.0),
                     blurRadius: 0.50,
                     color: Colors.black.withOpacity(.2),
                     spreadRadius: 0.10)
               ],
             ),
-            child: Icon(
+            child: const Icon(
               Icons.camera_alt,
               color: Colors.white,
             ),
@@ -81,10 +81,10 @@ class StatusPage extends StatelessWidget {
 
   Widget _storyWidget() {
     return Container(
-      margin: EdgeInsets.only(left: 10,right: 10,top: 4),
+      margin: const EdgeInsets.only(left: 10,right: 10,top: 4),
       child: Row(
         children: <Widget>[
-          Container(
+          SizedBox(
             height: 55,
             width: 55,
             child: Stack(
@@ -99,10 +99,10 @@ class StatusPage extends StatelessWidget {
                   child: Container(
                     width: 20,
                     height: 20,
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                         color: primaryColor,
                         borderRadius: BorderRadius.all(Radius.circular(20))),
-                    child: Icon(
+                    child: const Icon(
                       Icons.add,
                       color: Colors.white,
                       size: 15,
@@ -112,12 +112,12 @@ class StatusPage extends StatelessWidget {
               ],
             ),
           ),
-          SizedBox(
+          const SizedBox(
             width: 12,
           ),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
-            children: <Widget>[
+            children: const <Widget>[
               Text(
                 "My Status",
                 style: TextStyle(
@@ -141,11 +141,11 @@ class StatusPage extends StatelessWidget {
   Widget _recentTextWidget() {
     return Container(
       width: double.infinity,
-      padding: EdgeInsets.symmetric(horizontal: 10,vertical: 4),
+      padding: const EdgeInsets.symmetric(horizontal: 10,vertical: 4),
       decoration: BoxDecoration(
         color: Colors.grey[200]
       ),
-      child: Text("Recent updates"),
+      child: const Text("Recent updates"),
     );
   }
 
@@ -153,9 +153,9 @@ class StatusPage extends StatelessWidget {
     return ListView.builder(
       itemCount: 10,
       shrinkWrap: true,
-      physics: ScrollPhysics(),
+      physics: const ScrollPhysics(),
       itemBuilder: (BuildContext context, int index) {
-        return SingleItemStoryPage();
+        return const SingleItemStoryPage();
       },
     );
   }

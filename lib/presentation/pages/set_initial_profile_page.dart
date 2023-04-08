@@ -1,20 +1,21 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
-
-import '../screens/home_screen.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import '../bloc/phone_auth/phone_auth_cuibt.dart';
 import '../theme/constants.dart';
 import '../theme/style.dart';
 import '../widgets/default_button_widget.dart';
 
-class SetInitialProfileWidget extends StatefulWidget {
-  const SetInitialProfileWidget({super.key});
+class SetInitialProfilePage extends StatefulWidget {
+  final String phoneNumber;
+
+  const SetInitialProfilePage({super.key, required this.phoneNumber});
 
   @override
-  _SetInitialProfileWidgetState createState() =>
-      _SetInitialProfileWidgetState();
+  _SetInitialProfilePageState createState() => _SetInitialProfilePageState();
 }
 
-class _SetInitialProfileWidgetState extends State<SetInitialProfileWidget> {
+class _SetInitialProfilePageState extends State<SetInitialProfilePage> {
+  String get _phoneNumber => widget.phoneNumber;
   final TextEditingController _nameController = TextEditingController();
 
   @override
@@ -49,13 +50,8 @@ class _SetInitialProfileWidgetState extends State<SetInitialProfileWidget> {
             sizedBoxHeight30,
             _rowWidget(),
             DefaultButtonWidget(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (_) => HomeScreen(),
-                  ),
-                );
+              onPressed: (){
+                _submitProfileInfo();
               },
             ),
           ],
@@ -95,5 +91,15 @@ class _SetInitialProfileWidgetState extends State<SetInitialProfileWidget> {
         )
       ],
     );
+  }
+
+  _submitProfileInfo() {
+    if (_nameController.text.isNotEmpty) {
+      BlocProvider.of<PhoneAuthCubit>(context).submitProfileInfo(
+        name: _nameController.text,
+        phoneNumber: _phoneNumber,
+        profileUrl: '',
+      );
+    }
   }
 }

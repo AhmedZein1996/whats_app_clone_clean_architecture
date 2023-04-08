@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import '../pages/calls_page.dart';
 import '../pages/camera_page.dart';
 import '../pages/chat_page.dart';
@@ -8,6 +7,10 @@ import '../theme/style.dart';
 import '../widgets/custom_tab_bar.dart';
 
 class HomeScreen extends StatefulWidget {
+  final String uid;
+
+  const HomeScreen({super.key, required this.uid});
+
   @override
   State<HomeScreen> createState() => _HomeScreenState();
 }
@@ -17,13 +20,13 @@ class _HomeScreenState extends State<HomeScreen> {
 
   int _currentPageIndex = 1;
 
-  PageController _pageViewController = PageController(initialPage: 1);
+  final PageController _pageViewController = PageController(initialPage: 1);
 
   List<Widget> get _pages => [
-        CameraPage(),
-        ChatPage(),
-        StatusPage(),
-        CallsPage(),
+        const CameraPage(),
+        const ChatPage(),
+        const StatusPage(),
+        const CallsPage(),
       ];
 
   _buildSearch() {
@@ -34,7 +37,7 @@ class _HomeScreenState extends State<HomeScreen> {
           BoxShadow(
               color: Colors.black.withOpacity(.3),
               spreadRadius: 1,
-              offset: Offset(0.0, 0.50))
+              offset: const Offset(0.0, 0.50))
         ]),
         child: TextField(
           cursorColor: primaryColor,
@@ -45,7 +48,6 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
             prefixIcon: InkWell(
               onTap: () {
-                //TODO:
                 setState(() {
                   _isSearch = false;
                 });
@@ -63,52 +65,60 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: _currentPageIndex != 0
-          ? AppBar(
-              elevation: 0.0,
-              automaticallyImplyLeading: false,
-              backgroundColor:
-                  _isSearch == false ? primaryColor : Colors.transparent,
-              title: _isSearch == false
-                  ? Text("WhatsApp Clone")
-                  : Container(
-                      height: 0.0,
-                      width: 0.0,
-                    ),
-              flexibleSpace: _isSearch == false
-                  ? Container(
-                      height: 0.0,
-                      width: 0.0,
-                    )
-                  : _buildSearch(),
-              actions: <Widget>[
-                InkWell(
-                    onTap: () {
-                      setState(() {
-                        _isSearch = true;
-                      });
-                    },
-                    child: Icon(Icons.search)),
-                SizedBox(
-                  width: 5,
-                ),
-                InkWell(onTap: () {}, child: Icon(Icons.more_vert))
-              ],
-            )
-          : null,
+      appBar: AppBar(
+        elevation: 0.0,
+        automaticallyImplyLeading: false,
+        backgroundColor: _isSearch == false ? primaryColor : Colors.transparent,
+        title: _isSearch == false
+            ? const Text("WhatsApp Clone")
+            : const SizedBox(
+                height: 0.0,
+                width: 0.0,
+              ),
+        flexibleSpace: _isSearch == false
+            ? const SizedBox(
+                height: 0.0,
+                width: 0.0,
+              )
+            : _buildSearch(),
+        actions: <Widget>[
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 8.0),
+            child: InkWell(
+              onTap: () {},
+              child: const Icon(Icons.photo_camera),
+            ),
+          ),
+          const SizedBox(
+            width: 16,
+          ),
+          InkWell(
+              onTap: () {
+                setState(() {
+                  _isSearch = true;
+                });
+              },
+              child: const Icon(Icons.search)),
+          const SizedBox(
+            width: 16,
+          ),
+          InkWell(
+            onTap: () {},
+            child: const Icon(Icons.more_vert),
+          ),
+          const SizedBox(
+            width: 16,
+          ),
+        ],
+      ),
       body: Column(
         children: <Widget>[
-          _isSearch == false
-              ? _currentPageIndex != 0
-                  ? CustomTabBar(index: _currentPageIndex)
-                  : Container(
-                      height: 0.0,
-                      width: 0.0,
-                    )
-              : Container(
+          _isSearch == true
+              ? const SizedBox(
                   height: 0.0,
                   width: 0.0,
-                ),
+                )
+              : CustomTabBar(index: _currentPageIndex),
           Expanded(
             child: PageView.builder(
               itemCount: _pages.length,
