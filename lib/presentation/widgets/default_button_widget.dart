@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../theme/style.dart';
 
+// ignore: must_be_immutable
 class DefaultButtonWidget extends StatelessWidget {
   Function onPressed;
 
