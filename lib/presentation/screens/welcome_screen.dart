@@ -40,7 +40,6 @@ class WelcomeScreen extends StatelessWidget {
                   style: TextStyle(fontSize: 14),
                 ),
                sizedBoxHeight30,
-
                 MaterialButton(
                   color: greenColor,
                   onPressed: () {

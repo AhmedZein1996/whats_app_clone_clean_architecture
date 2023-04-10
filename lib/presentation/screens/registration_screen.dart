@@ -94,11 +94,6 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
       child: Column(
         children: <Widget>[
           const AppDescriptionWidget(),
-        body: Container(
-      margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 70),
-      child: Column(
-        children: <Widget>[
-          AppDescriptionWidget(),
           sizedBoxHeight30,
           CountryPickerWidget(countryPickerCallback: _countryPickerCallback),
           UserPhoneNumberWidget(
@@ -122,20 +117,6 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
       log('phone number isNotEmpty ');
       BlocProvider.of<PhoneAuthCubit>(context).submitVerifyPhoneNumber(_phoneNumber);
     }
-          ),
-          DefaultButtonWidget(
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (_) => PhoneVerificationPage(),
-                ),
-              );
-            },
-          ),
-        ],
-      ),
-    ));
   }
 
 }
