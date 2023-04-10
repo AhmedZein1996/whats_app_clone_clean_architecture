@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-
 import '../../theme/constants.dart';
 
 class SingleItemChatUserPage extends StatelessWidget {
+  const SingleItemChatUserPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -18,7 +19,7 @@ class SingleItemChatUserPage extends StatelessWidget {
                     height: 55,
                     width: 55,
                     child: ClipRRect(
-                      borderRadius: BorderRadius.all(const Radius.circular(25)),
+                      borderRadius: const BorderRadius.all(Radius.circular(25)),
                       child: Image.asset("assets/profile_default.png"),
                     ),
                   ),

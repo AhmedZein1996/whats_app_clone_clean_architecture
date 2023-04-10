@@ -9,13 +9,14 @@ import '../theme/style.dart';
 class CountryPickerWidget extends StatefulWidget {
   final Function countryPickerCallback;
 
-  CountryPickerWidget({required this.countryPickerCallback});
+  const CountryPickerWidget({super.key, required this.countryPickerCallback});
 
   @override
   _CountryPickerWidgetState createState() => _CountryPickerWidgetState();
 }
 
 class _CountryPickerWidgetState extends State<CountryPickerWidget> {
+
   Country _selectedFilteredDialogCountry =
       CountryPickerUtils.getCountryByPhoneCode('92');
 

@@ -4,6 +4,8 @@ import '../theme/constants.dart';
 import '../theme/style.dart';
 
 class AppDescriptionWidget extends StatelessWidget {
+  const AppDescriptionWidget({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Column(

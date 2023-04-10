@@ -1,13 +1,33 @@
-
 import 'package:flutter/material.dart';
+import 'package:whats_app_clone_clean_architecture/presentation/theme/style.dart';
 
 class CameraPage extends StatelessWidget {
+  const CameraPage({super.key});
+
   @override
   Widget build(BuildContext context) {
+    double width = MediaQuery.of(context).size.width;
     return Scaffold(
-      body: Center(child: Container(
-        child: Text('Camera page'),
-      )),
+      body: Center(
+        child: SizedBox(
+          width: width * .7,
+          child: TextButton(
+            style: TextButton.styleFrom(
+                padding: const EdgeInsets.all(18),
+                backgroundColor: greenColor,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(25),
+                )),
+            onPressed: () {},
+            child: const Text(
+              'Introducy your community',
+              style: TextStyle(
+                color: Colors.white,
+              ),
+            ),
+          ),
+        ),
+      ),
     );
   }
 }

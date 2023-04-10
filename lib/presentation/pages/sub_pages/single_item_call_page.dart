@@ -4,10 +4,12 @@ import '../../theme/constants.dart';
 import '../../theme/style.dart';
 
 class SingleItemCallPage extends StatelessWidget {
+  const SingleItemCallPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(top: 10, right: 10, left: 10),
+      margin: const EdgeInsets.only(top: 10, right: 10, left: 10),
       child: Column(
         children: <Widget>[
           Row(
@@ -15,28 +17,28 @@ class SingleItemCallPage extends StatelessWidget {
             children: <Widget>[
               Row(
                 children: <Widget>[
-                  Container(
+                  SizedBox(
                     height: 55,
                     width: 55,
                     child: ClipRRect(
-                      borderRadius: BorderRadius.all(Radius.circular(25)),
+                      borderRadius: const BorderRadius.all(Radius.circular(25)),
                       child: Image.asset("assets/profile_default.png"),
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 10,
                   ),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
-                      Text(
+                      const Text(
                         "User Name",
                         style: TextStyle(
                             fontSize: 18, fontWeight: FontWeight.w500),
                       ),
                       sizedBoxHeight5,
                       Row(
-                        children: <Widget>[
+                        children: const <Widget>[
                           Icon(
                             Icons.call_received,
                             color: primaryColor,
@@ -53,14 +55,15 @@ class SingleItemCallPage extends StatelessWidget {
                   ),
                 ],
               ),
+              const Icon(Icons.call,color: primaryColor,)
               Icon(
                 Icons.call,
                 color: primaryColor,
               )
             ],
           ),
-          Padding(
-            padding: const EdgeInsets.only(left: 60, right: 10),
+          const Padding(
+            padding: EdgeInsets.only(left: 60, right: 10),
             child: Divider(
               thickness: 1.50,
             ),

@@ -5,6 +5,8 @@ import '../theme/constants.dart';
 import '../theme/style.dart';
 
 class WelcomeScreen extends StatelessWidget {
+  const WelcomeScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -45,7 +47,7 @@ class WelcomeScreen extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (_) => RegistrationScreen(),
+                        builder: (_) => const RegistrationScreen(),
                       ),
                     );
                   },

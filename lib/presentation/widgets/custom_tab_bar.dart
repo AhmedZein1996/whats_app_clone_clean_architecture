@@ -5,20 +5,34 @@ import '../theme/style.dart';
 class CustomTabBar extends StatelessWidget {
   final int index;
 
-  const CustomTabBar({required this.index});
+  const CustomTabBar({super.key, required this.index});
 
   @override
   Widget build(BuildContext context) {
     return Container(
       height: 50,
-      decoration: BoxDecoration(color: primaryColor),
+      decoration: const BoxDecoration(color: primaryColor),
       child: Row(
         children: <Widget>[
-          Container(
-            width: 40,
-            child: Icon(
-              Icons.camera_alt,
-              color: Colors.white,
+          Padding(
+            padding: const EdgeInsets.only(left: 5.0),
+            child: Container(
+              decoration: BoxDecoration(
+                border: Border(
+                  bottom: BorderSide(
+                    color: index == 0 ? textIconColor : Colors.transparent,
+                    width: 3,
+                  ),
+                ),
+              ),
+              height: 50,
+              width: 40,
+              child: const Icon(
+                Icons.group,
+                color: Colors.white,
+                size: 30,
+
+              ),
             ),
           ),
           Expanded(
@@ -55,6 +69,7 @@ class CustomTabBarButton extends StatelessWidget {
   final double borderWidth;
 
   const CustomTabBarButton({
+    super.key,
     required this.text,
     required this.borderColor,
     required this.textColor,
