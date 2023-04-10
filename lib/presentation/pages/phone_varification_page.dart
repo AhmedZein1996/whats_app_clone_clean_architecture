@@ -25,14 +25,6 @@ class PhoneVerificationPage extends StatelessWidget {
               onPressed:(){
                 _submitSmsCode(context);
               }
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (_) => SetInitialProfileWidget(),
-                  ),
-                );
-              },
             ),
           ],
         ),
