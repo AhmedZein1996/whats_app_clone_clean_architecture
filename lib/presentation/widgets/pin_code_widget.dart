@@ -6,19 +6,7 @@ class PinCodeWidget extends StatelessWidget {
   static String pinCodeText = '';
   static String getPinCodeText() {
     return pinCodeText;
-class PinCodeWidget extends StatefulWidget {
-  @override
-  State<PinCodeWidget> createState() => _PinCodeWidgetState();
-}
-
-class _PinCodeWidgetState extends State<PinCodeWidget> {
-  final TextEditingController _pinCodeController = TextEditingController();
-  @override
-  void dispose() {
-    _pinCodeController.dispose();
-    super.dispose();
   }
-
   @override
   Widget build(BuildContext context) {
     return Container(
