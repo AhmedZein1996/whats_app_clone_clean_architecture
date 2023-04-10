@@ -51,6 +51,14 @@ class MyApp extends StatelessWidget {
             });
           },
         },
+    return MaterialApp(
+      title: 'Flutter Whatsapp Clone',
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        colorScheme: ThemeData().colorScheme.copyWith(
+              primary: primaryColor,
+            ),
+        primaryColor: primaryColor,
       ),
     );
   }

@@ -5,7 +5,11 @@ import '../theme/style.dart';
 
 // ignore: must_be_immutable
 class UserPhoneNumberWidget extends StatelessWidget {
+
      String? countryCode ;
+
+  String countryCode;
+
 
      UserPhoneNumberWidget({required this.countryCode});
 

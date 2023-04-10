@@ -4,7 +4,6 @@ import '../../theme/constants.dart';
 class SingleItemChatUserPage extends StatelessWidget {
   const SingleItemChatUserPage({super.key});
 
-
   @override
   Widget build(BuildContext context) {
     return Container(

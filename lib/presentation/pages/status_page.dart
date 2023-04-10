@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:whats_app_clone_clean_architecture/presentation/pages/sub_pages/singe_item_story_page.dart';
 
+
 import '../theme/style.dart';
+import 'sub_pages/singe_item_story_page.dart';
 
 class StatusPage extends StatelessWidget {
   const StatusPage({super.key});
@@ -25,6 +27,27 @@ class StatusPage extends StatelessWidget {
             )
           ],
         ),);
+      body: Stack(
+        children: <Widget>[
+          _customFloatingActionButton(),
+          SingleChildScrollView(
+            child: Column(
+              children: <Widget>[
+                _storyWidget(),
+                SizedBox(
+                  height: 8,
+                ),
+                _recentTextWidget(),
+                SizedBox(
+                  height: 8,
+                ),
+                _listStories(),
+              ],
+            ),
+          )
+        ],
+      ),
+    );
   }
 
   Widget _customFloatingActionButton() {
@@ -146,9 +169,11 @@ class StatusPage extends StatelessWidget {
         color: Colors.grey[200]
       ),
       child: const Text("Recent updates"),
+      padding: EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+      decoration: BoxDecoration(color: Colors.grey[200]),
+      child: Text("Recent updates"),
     );
   }
-
   Widget _listStories() {
     return ListView.builder(
       itemCount: 10,
